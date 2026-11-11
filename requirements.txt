@@ -1,0 +1,24 @@
+# Quant backtest skill — Python dependencies.
+# Install into a virtual environment, never with `pip install --user`
+# (PEP 668 blocks it on many systems) and never inside /tmp
+# (512 MB tmpfs fills up mid-install). Use a persistent directory,
+# e.g. ~/.quant-venv:
+#
+#   python3 -m venv ~/.quant-venv
+#   ~/.quant-venv/bin/pip install -r requirements.txt
+#
+# Versions actually used when this skill was first validated:
+# vectorbt 1.2.1, quantstats 0.0.86, skfolio 1.12.9,
+# scikit-learn 1.9.1, yfinance 1.8.0.
+# Pin ranges are deliberately loose below so a fresh install can
+# resolve; record the exact installed versions in the report.
+
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.6
+yfinance>=1.8
+vectorbt>=1.2,<2
+quantstats>=0.0.60
+skfolio>=1.12,<2
+scikit-learn>=1.3
